@@ -1,0 +1,129 @@
+:root {
+  --backcolor:rgba(85, 214, 170, 0.85);
+  --side_bar_bg:rgba(0, 54, 68, 0.5);
+  --item_bg:rgb(102, 0, 51);
+  --cont_bg:rgba(224, 238, 224, 1.0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pf-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--backcolor);
+}
+
+.pf-sidebar {
+  background: var(--side_bar_bg);
+  color: wheat;
+  padding: 3vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.pf-grid {
+  background: var(--cont_bg);
+}
+
+.pf-grid-item {
+  background: var(--item_bg);
+  color: white;
+  margin: 1vw;
+  padding: 1vw;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: yellow;
+}
+
+.pf-content {
+  padding: 3vw;
+}
+
+@media only screen and (max-width: 540px) {
+  .pf-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pf-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 541px) {
+  .pf-sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+  }
+  .pf-content {
+    -webkit-box-flex: 70vw;
+        -ms-flex: 70vw;
+            flex: 70vw;
+    padding-left: 32vw;
+  }
+  .pf-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pf-grid-item {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pf-sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+  }
+  .pf-content {
+    -webkit-box-flex: 70vw;
+        -ms-flex: 70vw;
+            flex: 70vw;
+    padding-left: 32vw;
+  }
+  .pf-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pf-grid-item {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
